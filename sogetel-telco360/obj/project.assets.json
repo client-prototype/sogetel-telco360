@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Desktop\\sogetel-telco360\\sogetel-telco360\\sogetel-telco360.csproj",
+      "projectUniqueName": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Documents\\GitHub\\sogetel-telco360\\sogetel-telco360\\sogetel-telco360.csproj",
       "projectName": "sogetel-telco360",
-      "projectPath": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Desktop\\sogetel-telco360\\sogetel-telco360\\sogetel-telco360.csproj",
+      "projectPath": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Documents\\GitHub\\sogetel-telco360\\sogetel-telco360\\sogetel-telco360.csproj",
       "packagesPath": "C:\\Users\\Thomas PIGUET\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Desktop\\sogetel-telco360\\sogetel-telco360\\obj\\",
+      "outputPath": "C:\\Users\\Thomas PIGUET\\OneDrive - REACTIS\\Documents\\GitHub\\sogetel-telco360\\sogetel-telco360\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thomas PIGUET\\AppData\\Roaming\\NuGet\\NuGet.Config",
