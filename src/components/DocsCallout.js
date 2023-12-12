@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { CCallout, CLink } from '@coreui/react'
+import { CCallout, CLink } from '@coreui/react-pro'
 
 const DocsCallout = (props) => {
-  const { content, href, name } = props
+  const { children, href, name } = props
 
   const plural = name.slice(-1) === 's' ? true : false
 
   const _href = `https://coreui.io/react/docs/${href}`
 
   return (
-    <CCallout color="info" className="bg-white">
-      {content
-        ? content
+    <CCallout color="info" className="bg-white dark:bg-dark">
+      {children
+        ? children
         : `A React ${name} component ${
             plural ? 'have' : 'has'
           } been created as a native React.js version
@@ -30,7 +30,7 @@ const DocsCallout = (props) => {
 }
 
 DocsCallout.propTypes = {
-  content: PropTypes.string,
+  children: PropTypes.node,
   href: PropTypes.string,
   name: PropTypes.string,
 }

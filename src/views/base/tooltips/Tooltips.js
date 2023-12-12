@@ -1,5 +1,14 @@
 import React from 'react'
-import { CButton, CCard, CCardBody, CCardHeader, CLink, CTooltip, CRow, CCol } from '@coreui/react'
+import {
+  CButton,
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CLink,
+  CTooltip,
+  CRow,
+  CCol,
+} from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const Tooltips = () => {
@@ -11,11 +20,9 @@ const Tooltips = () => {
             <strong>React Tooltip</strong> <small>Basic example</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
-              Hover over the links below to see tooltips:
-            </p>
+            <p className="text-body-secondary small">Hover over the links below to see tooltips:</p>
             <DocsExample href="components/tooltip">
-              <p className="text-medium-emphasis">
+              <p className="text-body-secondary">
                 Tight pants next level keffiyeh
                 <CTooltip content="Tooltip text">
                   <CLink> you probably </CLink>
@@ -39,7 +46,7 @@ const Tooltips = () => {
                 freegan cred raw denim single-origin coffee viral.
               </p>
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Hover over the buttons below to see the four tooltips directions: top, right, bottom,
               and left. Directions are mirrored when using CoreUI in RTL.
             </p>

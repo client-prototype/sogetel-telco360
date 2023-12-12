@@ -1,5 +1,5 @@
 import React from 'react'
-import { CButton, CCard, CCardBody, CCardHeader, CCol, CBadge, CRow } from '@coreui/react'
+import { CButton, CCard, CCardBody, CCardHeader, CCol, CBadge, CRow } from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const Badges = () => {
@@ -11,7 +11,7 @@ const Badges = () => {
             <strong>React Badges</strong> <small>Dismissing</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Bootstrap badge scale to suit the size of the parent element by using relative font
               sizing and <code>em</code> units.
             </p>
@@ -35,7 +35,7 @@ const Badges = () => {
                 Example heading <CBadge color="secondary">New</CBadge>
               </h6>
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Badges can be used as part of links or buttons to provide a counter.
             </p>
             <DocsExample href="components/badge">
@@ -43,11 +43,11 @@ const Badges = () => {
                 Notifications <CBadge color="secondary">4</CBadge>
               </CButton>
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Remark that depending on how you use them, badges may be complicated for users of
               screen readers and related assistive technologies.
             </p>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Unless the context is clear, consider including additional context with a visually
               hidden piece of additional text.
             </p>
@@ -66,7 +66,7 @@ const Badges = () => {
             <strong>React Badges</strong> <small>Contextual variations</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Add any of the below-mentioned <code>color</code> props to modify the presentation of
               a badge.
             </p>
@@ -86,29 +86,29 @@ const Badges = () => {
             <strong>React Badges</strong> <small>Pill badges</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Apply the <code>shape=&#34;rounded-pill&#34;</code> prop to make badges rounded.
             </p>
             <DocsExample href="components/badge#pill-badges">
               <CBadge color="primary" shape="rounded-pill">
                 primary
               </CBadge>
-              <CBadge color="success" shape="rounded-pill">
+              <CBadge color="success-gradient" shape="rounded-pill">
                 success
               </CBadge>
-              <CBadge color="danger" shape="rounded-pill">
+              <CBadge color="danger-gradient" shape="rounded-pill">
                 danger
               </CBadge>
-              <CBadge color="warning" shape="rounded-pill">
+              <CBadge color="warning-gradient" shape="rounded-pill">
                 warning
               </CBadge>
-              <CBadge color="info" shape="rounded-pill">
+              <CBadge color="info-gradient" shape="rounded-pill">
                 info
               </CBadge>
-              <CBadge color="light" shape="rounded-pill">
+              <CBadge color="light-gradient" shape="rounded-pill">
                 light
               </CBadge>
-              <CBadge color="dark" shape="rounded-pill">
+              <CBadge color="dark-gradient" shape="rounded-pill">
                 dark
               </CBadge>
             </DocsExample>

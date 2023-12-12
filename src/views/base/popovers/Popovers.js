@@ -1,5 +1,5 @@
 import React from 'react'
-import { CButton, CCard, CCardBody, CCardHeader, CPopover, CRow, CCol } from '@coreui/react'
+import { CButton, CCard, CCardBody, CCardHeader, CPopover, CRow, CCol } from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const Popovers = () => {
@@ -31,7 +31,7 @@ const Popovers = () => {
             <strong>React Popover</strong> <small>Four directions</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Four options are available: top, right, bottom, and left aligned. Directions are
               mirrored when using CoreUI for React in RTL.
             </p>

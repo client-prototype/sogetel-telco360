@@ -10,7 +10,7 @@ import {
   CCol,
   CPlaceholder,
   CRow,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 import ReactImg from 'src/assets/images/react.jpg'
@@ -24,7 +24,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               In the example below, we take a typical card component and recreate it with
               placeholders applied to create a &#34;loading card&#34;. Size and proportions are the
               same between the two.
@@ -39,7 +39,9 @@ const Placeholders = () => {
                       Some quick example text to build on the card title and make up the bulk of the
                       card&#39;s content.
                     </CCardText>
-                    <CButton href="#">Go somewhere</CButton>
+                    <CButton color="primary" href="#">
+                      Go somewhere
+                    </CButton>
                   </CCardBody>
                 </CCard>
                 <CCard style={{ width: '18rem' }}>
@@ -86,7 +88,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Create placeholders with the <code>&lt;CPlaceholder&gt;</code> component and a grid
               column propx (e.g., <code>xs={6}</code>) to set the <code>width</code>. They can
               replace the text inside an element or be added as a modifier class to an existing
@@ -112,7 +114,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong> <small> Width</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               You can change the <code>width</code> through grid column classes, width utilities, or
               inline styles.
             </p>
@@ -128,7 +130,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong> <small> Color</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               By default, the <code>&lt;CPlaceholder&gt;</code> uses <code>currentColor</code>. This
               can be overridden with a custom color or utility class.
             </p>
@@ -151,7 +153,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong> <small> Sizing</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               The size of <code>&lt;CPlaceholder&gt;</code>s are based on the typographic style of
               the parent element. Customize them with <code>size</code> prop: <code>lg</code>,{' '}
               <code>sm</code>, or <code>xs</code>.
@@ -169,7 +171,7 @@ const Placeholders = () => {
             <strong>React Placeholder</strong> <small> Animation</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Animate placeholders with <code>animation=&#34;glow&#34;</code> or{' '}
               <code>animation=&#34;wave&#34;</code> to better convey the perception of something
               being <em>actively</em> loaded.

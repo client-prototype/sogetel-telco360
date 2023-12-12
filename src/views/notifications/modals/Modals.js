@@ -14,14 +14,16 @@ import {
   CPopover,
   CRow,
   CTooltip,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const LiveDemo = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Launch demo modal
+      </CButton>
       <CModal visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -42,7 +44,9 @@ const StaticBackdrop = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch static backdrop modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Launch static backdrop modal
+      </CButton>
       <CModal backdrop="static" visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -65,7 +69,9 @@ const ScrollingLongContent = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Launch demo modal
+      </CButton>
       <CModal visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -165,7 +171,9 @@ const ScrollingLongContent2 = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Launch demo modal
+      </CButton>
       <CModal scrollable visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -265,7 +273,9 @@ const VerticallyCentered = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Vertically centered modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Vertically centered modal
+      </CButton>
       <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -289,7 +299,9 @@ const VerticallyCentered2 = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Vertically centered scrollable modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Vertically centered scrollable modal
+      </CButton>
       <CModal alignment="center" scrollable visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -332,7 +344,9 @@ const TooltipsPopovers = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Launch demo modal
+      </CButton>
       <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
@@ -342,7 +356,7 @@ const TooltipsPopovers = () => {
           <p>
             This
             <CPopover title="Popover title" content="Popover body content is set in this property.">
-              <CButton>button</CButton>
+              <CButton color="primary">button</CButton>
             </CPopover>{' '}
             triggers a popover on click.
           </p>
@@ -376,9 +390,15 @@ const OptionalSizes = () => {
   const [visibleSm, setVisibleSm] = useState(false)
   return (
     <>
-      <CButton onClick={() => setVisibleXL(!visibleXL)}>Extra large modal</CButton>
-      <CButton onClick={() => setVisibleLg(!visibleLg)}>Large modal</CButton>
-      <CButton onClick={() => setVisibleSm(!visibleSm)}>Small large modal</CButton>
+      <CButton color="primary" onClick={() => setVisibleXL(!visibleXL)}>
+        Extra large modal
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleLg(!visibleLg)}>
+        Large modal
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleSm(!visibleSm)}>
+        Small large modal
+      </CButton>
       <CModal size="xl" visible={visibleXL} onClose={() => setVisibleXL(false)}>
         <CModalHeader>
           <CModalTitle>Extra large modal</CModalTitle>
@@ -411,12 +431,24 @@ const FullscreenModal = () => {
 
   return (
     <>
-      <CButton onClick={() => setVisible(!visible)}>Full screen</CButton>
-      <CButton onClick={() => setVisibleSm(!visibleSm)}>Full screen below sm</CButton>
-      <CButton onClick={() => setVisibleMd(!visibleMd)}>Full screen below md</CButton>
-      <CButton onClick={() => setVisibleLg(!visibleLg)}>Full screen below lg</CButton>
-      <CButton onClick={() => setVisibleXL(!visibleXL)}>Full screen below xl</CButton>
-      <CButton onClick={() => setVisibleXXL(!visibleXXL)}>Full screen below xxl</CButton>
+      <CButton color="primary" onClick={() => setVisible(!visible)}>
+        Full screen
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleSm(!visibleSm)}>
+        Full screen below sm
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleMd(!visibleMd)}>
+        Full screen below md
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleLg(!visibleLg)}>
+        Full screen below lg
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleXL(!visibleXL)}>
+        Full screen below xl
+      </CButton>
+      <CButton color="primary" onClick={() => setVisibleXXL(!visibleXXL)}>
+        Full screen below xxl
+      </CButton>
       <CModal fullscreen visible={visible} onClose={() => setVisible(false)}>
         <CModalHeader>
           <CModalTitle>Full screen</CModalTitle>
@@ -466,7 +498,7 @@ const Modals = () => {
             <strong>React Modal</strong>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Below is a static modal example (meaning its <code>position</code> and{' '}
               <code>display</code> have been overridden). Included are the modal header, modal body
               (required for <code>padding</code>), and modal footer (optional). We ask that you
@@ -500,7 +532,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Live demo</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Toggle a working modal demo by clicking the button below. It will slide down and fade
               in from the top of the page.
             </p>
@@ -514,7 +546,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Static backdrop</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               If you don’t provide an <code>onDimsiss</code> handler to the Modal component, your
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
@@ -529,7 +561,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Scrolling long content</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               If you don’t provide an <code>onDimsiss</code> handler to the Modal component, your
               modal will behave as though the backdrop is static, meaning it will not close when
               clicking outside it. Click the button below to try it.
@@ -537,7 +569,7 @@ const Modals = () => {
             <DocsExample href="components/modal#scrolling-long-content">
               {ScrollingLongContent()}
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               You can also create a scrollable modal that allows scroll the modal body by adding{' '}
               <code>scrollable</code> prop.
             </p>
@@ -553,7 +585,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Vertically centered</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Add <code>alignment=&#34;center&#34;</code> to <code>&lt;CModal&gt;</code> to
               vertically center the modal.
             </p>
@@ -572,7 +604,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Tooltips and popovers</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               <code>&lt;CTooltips&gt;</code> and <code>&lt;CPopovers&gt;</code> can be placed within
               modals as needed. When modals are closed, any tooltips and popovers within are also
               automatically dismissed.
@@ -589,7 +621,7 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Optional sizes</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Modals have three optional sizes, available via modifier classes to be placed on a{' '}
               <code>&lt;CModal&gt;</code>. These sizes kick in at certain breakpoints to avoid
               horizontal scrollbars on narrower viewports.
@@ -614,7 +646,7 @@ const Modals = () => {
                 </tr>
                 <tr>
                   <td>Default</td>
-                  <td className="text-medium-emphasis">None</td>
+                  <td className="text-body-secondary">None</td>
                   <td>
                     <code>500px</code>
                   </td>
@@ -649,14 +681,14 @@ const Modals = () => {
             <strong>React Modal</strong> <small>Fullscreen Modal</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Another override is the option to pop up a modal that covers the user viewport,
-              available via property <code>fullscrean</code>.
+              available via property <code>fullscreen</code>.
             </p>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Property fullscrean</th>
+                  <th>Property fullscreen</th>
                   <th>Availability</th>
                 </tr>
               </thead>

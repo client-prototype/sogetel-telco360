@@ -18,7 +18,7 @@ import {
   CNavLink,
   CDropdown,
   CButton,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import { DocsLink } from 'src/components'
 
 const CNavbars = () => {

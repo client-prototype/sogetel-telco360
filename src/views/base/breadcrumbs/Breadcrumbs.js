@@ -8,7 +8,7 @@ import {
   CCol,
   CRow,
   CLink,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const Breadcrumbs = () => {
@@ -20,7 +20,7 @@ const Breadcrumbs = () => {
             <strong>React Breadcrumb</strong>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               The breadcrumb navigation provides links back to each previous page the user navigated
               through and shows the current location in a website or an application. You don’t have
               to add separators, because they automatically added in CSS through{' '}

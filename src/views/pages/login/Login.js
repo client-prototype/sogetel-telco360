@@ -12,13 +12,13 @@ import {
   CInputGroup,
   CInputGroupText,
   CRow,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={8}>
@@ -27,7 +27,7 @@ const Login = () => {
                 <CCardBody>
                   <CForm>
                     <h1>Login</h1>
-                    <p className="text-medium-emphasis">Sign In to your account</p>
+                    <p className="text-body-secondary">Sign In to your account</p>
                     <CInputGroup className="mb-3">
                       <CInputGroupText>
                         <CIcon icon={cilUser} />

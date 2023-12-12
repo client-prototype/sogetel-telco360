@@ -10,13 +10,13 @@ import {
   CInputGroup,
   CInputGroupText,
   CRow,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Register = () => {
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={9} lg={7} xl={6}>
@@ -24,7 +24,7 @@ const Register = () => {
               <CCardBody className="p-4">
                 <CForm>
                   <h1>Register</h1>
-                  <p className="text-medium-emphasis">Create your account</p>
+                  <p className="text-body-secondary">Create your account</p>
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />

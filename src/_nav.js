@@ -3,52 +3,58 @@ import CIcon from '@coreui/icons-react'
 import {
   cilBell,
   cilCalculator,
+  cilCalendar,
   cilChartPie,
   cilCursor,
-  cilDescription,
   cilDrop,
+  cilEnvelopeOpen,
+  cilGrid,
+  cilLayers,
+  cilMap,
   cilNotes,
   cilPencil,
   cilPuzzle,
   cilSpeedometer,
+  cilSpreadsheet,
   cilStar,
 } from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react-pro'
+import { Translation } from 'react-i18next'
 
 const _nav = [
   {
     component: CNavItem,
-    name: 'Dashboard',
+    name: <Translation>{(t) => t('dashboard')}</Translation>,
     to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
-      color: 'info',
+      color: 'info-gradient',
       text: 'NEW',
     },
   },
   {
     component: CNavTitle,
-    name: 'Theme',
+    name: <Translation>{(t) => t('theme')}</Translation>,
   },
   {
     component: CNavItem,
-    name: 'Colors',
+    name: <Translation>{(t) => t('colors')}</Translation>,
     to: '/theme/colors',
     icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Typography',
+    name: <Translation>{(t) => t('typography')}</Translation>,
     to: '/theme/typography',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
-    name: 'Components',
+    name: <Translation>{(t) => t('components')}</Translation>,
   },
   {
     component: CNavGroup,
-    name: 'Base',
+    name: <Translation>{(t) => t('base')}</Translation>,
     to: '/base',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
@@ -126,7 +132,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Buttons',
+    name: <Translation>{(t) => t('buttons')}</Translation>,
     to: '/buttons',
     icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
     items: [
@@ -145,11 +151,20 @@ const _nav = [
         name: 'Dropdowns',
         to: '/buttons/dropdowns',
       },
+      {
+        component: CNavItem,
+        name: 'Loading Buttons',
+        to: '/buttons/loading-buttons',
+        badge: {
+          color: 'danger-gradient',
+          text: 'PRO',
+        },
+      },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: <Translation>{(t) => t('forms')}</Translation>,
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
@@ -161,6 +176,15 @@ const _nav = [
         component: CNavItem,
         name: 'Select',
         to: '/forms/select',
+      },
+      {
+        component: CNavItem,
+        name: 'Multi Select',
+        to: '/forms/multi-select',
+        badge: {
+          color: 'danger-gradient',
+          text: 'PRO',
+        },
       },
       {
         component: CNavItem,
@@ -184,6 +208,33 @@ const _nav = [
       },
       {
         component: CNavItem,
+        name: 'Date Picker',
+        to: '/forms/date-picker',
+        badge: {
+          color: 'danger-gradient',
+          text: 'PRO',
+        },
+      },
+      {
+        component: CNavItem,
+        name: 'Date Range Picker',
+        to: '/forms/date-range-picker',
+        badge: {
+          color: 'danger-gradient',
+          text: 'PRO',
+        },
+      },
+      {
+        component: CNavItem,
+        name: 'Time Picker',
+        to: '/forms/time-picker',
+        badge: {
+          color: 'danger-gradient',
+          text: 'PRO',
+        },
+      },
+      {
+        component: CNavItem,
         name: 'Layout',
         to: '/forms/layout',
       },
@@ -195,14 +246,8 @@ const _nav = [
     ],
   },
   {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
     component: CNavGroup,
-    name: 'Icons',
+    name: <Translation>{(t) => t('icons')}</Translation>,
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
@@ -210,8 +255,8 @@ const _nav = [
         name: 'CoreUI Free',
         to: '/icons/coreui-icons',
         badge: {
-          color: 'success',
-          text: 'NEW',
+          color: 'success-gradient',
+          text: 'FREE',
         },
       },
       {
@@ -228,7 +273,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
+    name: <Translation>{(t) => t('notifications')}</Translation>,
     icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
     items: [
       {
@@ -255,50 +300,143 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Widgets',
+    name: <Translation>{(t) => t('widgets')}</Translation>,
     to: '/widgets',
     icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
     badge: {
-      color: 'info',
+      color: 'info-gradient',
       text: 'NEW',
     },
   },
   {
+    component: CNavItem,
+    name: 'Smart Table',
+    icon: <CIcon icon={cilGrid} customClassName="nav-icon" />,
+    badge: {
+      color: 'danger-gradient',
+      text: 'PRO',
+    },
+    to: '/smart-table',
+  },
+  {
     component: CNavTitle,
-    name: 'Extras',
+    name: <Translation>{(t) => t('plugins')}</Translation>,
+  },
+  {
+    component: CNavItem,
+    name: <Translation>{(t) => t('calendar')}</Translation>,
+    icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
+    badge: {
+      color: 'danger-gradient',
+      text: 'PRO',
+    },
+    to: '/plugins/calendar',
+  },
+  {
+    component: CNavItem,
+    name: <Translation>{(t) => t('charts')}</Translation>,
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+    to: '/plugins/charts',
+  },
+  {
+    component: CNavItem,
+    name: 'Google Maps',
+    icon: <CIcon icon={cilMap} customClassName="nav-icon" />,
+    badge: {
+      color: 'danger-gradient',
+      text: 'PRO',
+    },
+    to: '/plugins/google-maps',
+  },
+  {
+    component: CNavTitle,
+    name: <Translation>{(t) => t('extras')}</Translation>,
   },
   {
     component: CNavGroup,
-    name: 'Pages',
+    name: <Translation>{(t) => t('pages')}</Translation>,
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Login',
+        name: <Translation>{(t) => t('login')}</Translation>,
         to: '/login',
       },
       {
         component: CNavItem,
-        name: 'Register',
+        name: <Translation>{(t) => t('register')}</Translation>,
         to: '/register',
       },
       {
         component: CNavItem,
-        name: 'Error 404',
+        name: <Translation>{(t) => t('error404')}</Translation>,
         to: '/404',
       },
       {
         component: CNavItem,
-        name: 'Error 500',
+        name: <Translation>{(t) => t('error500')}</Translation>,
         to: '/500',
       },
     ],
   },
   {
-    component: CNavItem,
-    name: 'Docs',
-    href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    component: CNavGroup,
+    name: <Translation>{(t) => t('apps')}</Translation>,
+    icon: <CIcon icon={cilLayers} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavGroup,
+        name: 'Invoicing',
+        icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+        to: '/apps/invoicing',
+        items: [
+          {
+            component: CNavItem,
+            name: 'Invoice',
+            badge: {
+              color: 'danger-gradient',
+              text: 'PRO',
+            },
+            to: '/apps/invoicing/invoice',
+          },
+        ],
+      },
+      {
+        component: CNavGroup,
+        name: 'Email',
+        to: '/apps/email',
+        icon: <CIcon icon={cilEnvelopeOpen} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Inbox',
+            badge: {
+              color: 'danger-gradient',
+              text: 'PRO',
+            },
+            to: '/apps/email/inbox',
+          },
+          {
+            component: CNavItem,
+            name: 'Message',
+            badge: {
+              color: 'danger-gradient',
+              text: 'PRO',
+            },
+            to: '/apps/email/message',
+          },
+          {
+            component: CNavItem,
+            name: 'Compose',
+            badge: {
+              color: 'danger-gradient',
+              text: 'PRO',
+            },
+            to: '/apps/email/compose',
+          },
+        ],
+      },
+    ],
   },
 ]
 

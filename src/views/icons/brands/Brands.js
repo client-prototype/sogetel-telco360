@@ -1,5 +1,5 @@
 import React from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
+import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import { brandSet } from '@coreui/icons'
 import { DocsCallout } from 'src/components'

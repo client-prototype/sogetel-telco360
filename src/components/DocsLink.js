@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { CLink } from '@coreui/react'
+import { CLink } from '@coreui/react-pro'
 
 const DocsLink = (props) => {
   const { href, name, text, ...rest } = props
@@ -16,7 +16,7 @@ const DocsLink = (props) => {
         target="_blank"
         className="card-header-action"
       >
-        <small className="text-medium-emphasis">{text || 'docs'}</small>
+        <small className="text-body-secondary">{text || 'docs'}</small>
       </CLink>
     </div>
   )

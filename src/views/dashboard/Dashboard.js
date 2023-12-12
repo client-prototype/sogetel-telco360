@@ -1,4 +1,6 @@
 import React from 'react'
+import classNames from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import {
   CAvatar,
@@ -17,9 +19,7 @@ import {
   CTableHead,
   CTableHeaderCell,
   CTableRow,
-} from '@coreui/react'
-import { CChartLine } from '@coreui/react-chartjs'
-import { getStyle, hexToRgba } from '@coreui/utils'
+} from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import {
   cibCcAmex,
@@ -53,39 +53,71 @@ import avatar6 from 'src/assets/images/avatars/6.jpg'
 
 import WidgetsBrand from '../widgets/WidgetsBrand'
 import WidgetsDropdown from '../widgets/WidgetsDropdown'
+import MainChart from './MainChart'
 
 const Dashboard = () => {
-  const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+  const { t } = useTranslation()
 
   const progressExample = [
-    { title: 'Visits', value: '29.703 Users', percent: 40, color: 'success' },
-    { title: 'Unique', value: '24.093 Users', percent: 20, color: 'info' },
-    { title: 'Pageviews', value: '78.706 Views', percent: 60, color: 'warning' },
-    { title: 'New Users', value: '22.123 Users', percent: 80, color: 'danger' },
-    { title: 'Bounce Rate', value: 'Average Rate', percent: 40.15, color: 'primary' },
+    {
+      title: t('visits'),
+      value: t('usersCounter', { counter: '29.703' }),
+      percent: 40,
+      color: 'success',
+    },
+    {
+      title: t('unique'),
+      value: t('usersCounter', { counter: '24.093' }),
+      percent: 20,
+      color: 'info',
+    },
+    {
+      title: t('pageviews'),
+      value: t('viewsCounter', { counter: '78.706' }),
+      percent: 60,
+      color: 'warning',
+    },
+    {
+      title: t('newUsers'),
+      value: t('usersCounter', { counter: '22.123' }),
+      percent: 80,
+      color: 'danger',
+    },
+    { title: t('bounceRate'), value: '', percent: 40.15, color: 'primary' },
   ]
 
   const progressGroupExample1 = [
-    { title: 'Monday', value1: 34, value2: 78 },
-    { title: 'Tuesday', value1: 56, value2: 94 },
-    { title: 'Wednesday', value1: 12, value2: 67 },
-    { title: 'Thursday', value1: 43, value2: 91 },
-    { title: 'Friday', value1: 22, value2: 73 },
-    { title: 'Saturday', value1: 53, value2: 82 },
-    { title: 'Sunday', value1: 9, value2: 69 },
+    { title: t('monday'), value1: 34, value2: 78 },
+    { title: t('tuesday'), value1: 56, value2: 94 },
+    { title: t('wednesday'), value1: 12, value2: 67 },
+    { title: t('thursday'), value1: 43, value2: 91 },
+    { title: t('friday'), value1: 22, value2: 73 },
+    { title: t('saturday'), value1: 53, value2: 82 },
+    { title: t('sunday'), value1: 9, value2: 69 },
   ]
 
   const progressGroupExample2 = [
-    { title: 'Male', icon: cilUser, value: 53 },
-    { title: 'Female', icon: cilUserFemale, value: 43 },
+    { title: t('male'), icon: cilUser, value: 53 },
+    { title: t('female'), icon: cilUserFemale, value: 43 },
   ]
 
   const progressGroupExample3 = [
-    { title: 'Organic Search', icon: cibGoogle, percent: 56, value: '191,235' },
+    { title: t('organicSearch'), icon: cibGoogle, percent: 56, value: '191,235' },
     { title: 'Facebook', icon: cibFacebook, percent: 15, value: '51,223' },
     { title: 'Twitter', icon: cibTwitter, percent: 11, value: '37,564' },
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
+
+  const tableExampleUsagePeriod = (dateStart, dateEnd) => {
+    const formatParams = { date: { year: 'numeric', month: 'short', day: 'numeric' } }
+    return `${t('date', {
+      date: dateStart,
+      formatParams,
+    })} - ${t('date', {
+      date: dateEnd,
+      formatParams,
+    })}`
+  }
 
   const tableExample = [
     {
@@ -93,114 +125,160 @@ const Dashboard = () => {
       user: {
         name: 'Yiorgos Avraamu',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
       },
       country: { name: 'USA', flag: cifUs },
       usage: {
         value: 50,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'success',
       },
       payment: { name: 'Mastercard', icon: cibCcMastercard },
-      activity: '10 sec ago',
+      activity: t('relativeTime', { val: -10, range: 'seconds' }),
     },
     {
       avatar: { src: avatar2, status: 'danger' },
       user: {
         name: 'Avram Tarasios',
         new: false,
-        registered: 'Jan 1, 2021',
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
       },
       country: { name: 'Brazil', flag: cifBr },
       usage: {
         value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'info',
       },
       payment: { name: 'Visa', icon: cibCcVisa },
-      activity: '5 minutes ago',
+      activity: t('relativeTime', { val: -5, range: 'minutes' }),
     },
     {
       avatar: { src: avatar3, status: 'warning' },
-      user: { name: 'Quintin Ed', new: true, registered: 'Jan 1, 2021' },
+      user: {
+        name: 'Quintin Ed',
+        new: true,
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
+      },
       country: { name: 'India', flag: cifIn },
       usage: {
         value: 74,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'warning',
       },
       payment: { name: 'Stripe', icon: cibCcStripe },
-      activity: '1 hour ago',
+      activity: t('relativeTime', { val: -1, range: 'hours' }),
     },
     {
       avatar: { src: avatar4, status: 'secondary' },
-      user: { name: 'Enéas Kwadwo', new: true, registered: 'Jan 1, 2021' },
+      user: {
+        name: 'Enéas Kwadwo',
+        new: true,
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
+      },
       country: { name: 'France', flag: cifFr },
       usage: {
         value: 98,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'danger',
       },
       payment: { name: 'PayPal', icon: cibCcPaypal },
-      activity: 'Last month',
+      activity: t('relativeTime', { val: -1, range: 'weeks' }),
     },
     {
       avatar: { src: avatar5, status: 'success' },
       user: {
         name: 'Agapetus Tadeáš',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
       },
       country: { name: 'Spain', flag: cifEs },
       usage: {
         value: 22,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'primary',
       },
       payment: { name: 'Google Wallet', icon: cibCcApplePay },
-      activity: 'Last week',
+      activity: t('relativeTime', { val: -3, range: 'months' }),
     },
     {
       avatar: { src: avatar6, status: 'danger' },
       user: {
         name: 'Friderik Dávid',
         new: true,
-        registered: 'Jan 1, 2021',
+        registered: t('date', {
+          date: new Date(2023, 0, 10),
+          formatParams: { date: { year: 'numeric', month: 'short', day: 'numeric' } },
+        }),
       },
       country: { name: 'Poland', flag: cifPl },
       usage: {
         value: 43,
-        period: 'Jun 11, 2021 - Jul 10, 2021',
+        period: tableExampleUsagePeriod(new Date(2023, 5, 11), new Date(2023, 6, 10)),
         color: 'success',
       },
       payment: { name: 'Amex', icon: cibCcAmex },
-      activity: 'Last week',
+      activity: t('relativeTime', { val: -1, range: 'years' }),
     },
   ]
 
   return (
     <>
-      <WidgetsDropdown />
+      <WidgetsDropdown className="mb-4" />
       <CCard className="mb-4">
         <CCardBody>
           <CRow>
             <CCol sm={5}>
               <h4 id="traffic" className="card-title mb-0">
-                Traffic
+                {t('traffic')}
               </h4>
-              <div className="small text-medium-emphasis">January - July 2021</div>
+              <div className="small text-body-secondary">
+                {' '}
+                {t('date', {
+                  date: new Date(2023, 0, 1),
+                  formatParams: {
+                    date: {
+                      month: 'long',
+                    },
+                  },
+                })}{' '}
+                -{' '}
+                {t('date', {
+                  date: new Date(2023, 6, 1),
+                  formatParams: {
+                    date: {
+                      year: 'numeric',
+                      month: 'long',
+                    },
+                  },
+                })}
+              </div>
             </CCol>
             <CCol sm={7} className="d-none d-md-block">
               <CButton color="primary" className="float-end">
                 <CIcon icon={cilCloudDownload} />
               </CButton>
               <CButtonGroup className="float-end me-3">
-                {['Day', 'Month', 'Year'].map((value) => (
+                {[t('day'), t('month'), t('year')].map((value, index) => (
                   <CButton
                     color="outline-secondary"
                     key={value}
                     className="mx-0"
-                    active={value === 'Month'}
+                    active={index === 1}
                   >
                     {value}
                   </CButton>
@@ -208,125 +286,60 @@ const Dashboard = () => {
               </CButtonGroup>
             </CCol>
           </CRow>
-          <CChartLine
-            style={{ height: '300px', marginTop: '40px' }}
-            data={{
-              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-              datasets: [
-                {
-                  label: 'My First dataset',
-                  backgroundColor: hexToRgba(getStyle('--cui-info'), 10),
-                  borderColor: getStyle('--cui-info'),
-                  pointHoverBackgroundColor: getStyle('--cui-info'),
-                  borderWidth: 2,
-                  data: [
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                  ],
-                  fill: true,
-                },
-                {
-                  label: 'My Second dataset',
-                  backgroundColor: 'transparent',
-                  borderColor: getStyle('--cui-success'),
-                  pointHoverBackgroundColor: getStyle('--cui-success'),
-                  borderWidth: 2,
-                  data: [
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                    random(50, 200),
-                  ],
-                },
-                {
-                  label: 'My Third dataset',
-                  backgroundColor: 'transparent',
-                  borderColor: getStyle('--cui-danger'),
-                  pointHoverBackgroundColor: getStyle('--cui-danger'),
-                  borderWidth: 1,
-                  borderDash: [8, 5],
-                  data: [65, 65, 65, 65, 65, 65, 65],
-                },
-              ],
-            }}
-            options={{
-              maintainAspectRatio: false,
-              plugins: {
-                legend: {
-                  display: false,
-                },
-              },
-              scales: {
-                x: {
-                  grid: {
-                    drawOnChartArea: false,
-                  },
-                },
-                y: {
-                  ticks: {
-                    beginAtZero: true,
-                    maxTicksLimit: 5,
-                    stepSize: Math.ceil(250 / 5),
-                    max: 250,
-                  },
-                },
-              },
-              elements: {
-                line: {
-                  tension: 0.4,
-                },
-                point: {
-                  radius: 0,
-                  hitRadius: 10,
-                  hoverRadius: 4,
-                  hoverBorderWidth: 3,
-                },
-              },
-            }}
-          />
+          <MainChart />
         </CCardBody>
         <CCardFooter>
-          <CRow xs={{ cols: 1 }} md={{ cols: 5 }} className="text-center">
-            {progressExample.map((item, index) => (
-              <CCol className="mb-sm-2 mb-0" key={index}>
-                <div className="text-medium-emphasis">{item.title}</div>
-                <strong>
+          <CRow
+            xs={{ cols: 1, gutter: 4 }}
+            sm={{ cols: 2 }}
+            lg={{ cols: 4 }}
+            xl={{ cols: 5 }}
+            className="mb-2 text-center"
+          >
+            {progressExample.map((item, index, items) => (
+              <CCol
+                className={classNames({
+                  'd-none d-xl-block': index + 1 === items.length,
+                })}
+                key={index}
+              >
+                <div className="text-body-secondary">{item.title}</div>
+                <div className="fw-semibold text-truncate">
                   {item.value} ({item.percent}%)
-                </strong>
-                <CProgress thin className="mt-2" color={item.color} value={item.percent} />
+                </div>
+                <CProgress
+                  thin
+                  className="mt-2"
+                  color={`${item.color}-gradient`}
+                  value={item.percent}
+                />
               </CCol>
             ))}
           </CRow>
         </CCardFooter>
       </CCard>
-
-      <WidgetsBrand withCharts />
-
+      <WidgetsBrand className="mb-4" withCharts />
       <CRow>
         <CCol xs>
           <CCard className="mb-4">
-            <CCardHeader>Traffic {' & '} Sales</CCardHeader>
+            <CCardHeader>{t('trafficAndSales')}</CCardHeader>
             <CCardBody>
               <CRow>
                 <CCol xs={12} md={6} xl={6}>
                   <CRow>
-                    <CCol sm={6}>
+                    <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-info py-1 px-3">
-                        <div className="text-medium-emphasis small">New Clients</div>
+                        <div className="text-body-secondary text-truncate small">
+                          {t('newClients')}
+                        </div>
                         <div className="fs-5 fw-semibold">9,123</div>
                       </div>
                     </CCol>
-                    <CCol sm={6}>
+                    <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-danger py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Recurring Clients</div>
+                        <div className="text-body-secondary text-truncate small">
+                          {t('recurringClients')}
+                        </div>
                         <div className="fs-5 fw-semibold">22,643</div>
                       </div>
                     </CCol>
@@ -336,11 +349,11 @@ const Dashboard = () => {
                   {progressGroupExample1.map((item, index) => (
                     <div className="progress-group mb-4" key={index}>
                       <div className="progress-group-prepend">
-                        <span className="text-medium-emphasis small">{item.title}</span>
+                        <span className="text-body-secondary small">{item.title}</span>
                       </div>
                       <div className="progress-group-bars">
-                        <CProgress thin color="info" value={item.value1} />
-                        <CProgress thin color="danger" value={item.value2} />
+                        <CProgress thin color="info-gradient" value={item.value1} />
+                        <CProgress thin color="danger-gradient" value={item.value2} />
                       </div>
                     </div>
                   ))}
@@ -348,15 +361,19 @@ const Dashboard = () => {
 
                 <CCol xs={12} md={6} xl={6}>
                   <CRow>
-                    <CCol sm={6}>
+                    <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Pageviews</div>
+                        <div className="text-body-secondary text-truncate small">
+                          {t('pageviews')}
+                        </div>
                         <div className="fs-5 fw-semibold">78,623</div>
                       </div>
                     </CCol>
-                    <CCol sm={6}>
+                    <CCol xs={6}>
                       <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Organic</div>
+                        <div className="text-body-secondary text-truncate small">
+                          {t('organic')}
+                        </div>
                         <div className="fs-5 fw-semibold">49,123</div>
                       </div>
                     </CCol>
@@ -372,7 +389,7 @@ const Dashboard = () => {
                         <span className="ms-auto fw-semibold">{item.value}%</span>
                       </div>
                       <div className="progress-group-bars">
-                        <CProgress thin color="warning" value={item.value} />
+                        <CProgress thin color="warning-gradient" value={item.value} />
                       </div>
                     </div>
                   ))}
@@ -386,11 +403,11 @@ const Dashboard = () => {
                         <span>{item.title}</span>
                         <span className="ms-auto fw-semibold">
                           {item.value}{' '}
-                          <span className="text-medium-emphasis small">({item.percent}%)</span>
+                          <span className="text-body-secondary small">({item.percent}%)</span>
                         </span>
                       </div>
                       <div className="progress-group-bars">
-                        <CProgress thin color="success" value={item.percent} />
+                        <CProgress thin color="success-gradient" value={item.percent} />
                       </div>
                     </div>
                   ))}
@@ -400,16 +417,22 @@ const Dashboard = () => {
               <br />
 
               <CTable align="middle" className="mb-0 border" hover responsive>
-                <CTableHead color="light">
+                <CTableHead className="text-nowrap">
                   <CTableRow>
-                    <CTableHeaderCell className="text-center">
+                    <CTableHeaderCell className="bg-body-tertiary text-center">
                       <CIcon icon={cilPeople} />
                     </CTableHeaderCell>
-                    <CTableHeaderCell>User</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Country</CTableHeaderCell>
-                    <CTableHeaderCell>Usage</CTableHeaderCell>
-                    <CTableHeaderCell className="text-center">Payment Method</CTableHeaderCell>
-                    <CTableHeaderCell>Activity</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">{t('user')}</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary text-center">
+                      {t('country')}
+                    </CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">{t('usage')}</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary text-center">
+                      {t('paymentMethod')}
+                    </CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">
+                      {t('activity')}
+                    </CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
@@ -420,8 +443,9 @@ const Dashboard = () => {
                       </CTableDataCell>
                       <CTableDataCell>
                         <div>{item.user.name}</div>
-                        <div className="small text-medium-emphasis">
-                          <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
+                        <div className="small text-body-secondary text-nowrap">
+                          <span>{item.user.new ? t('new') : t('recurring')}</span> |{' '}
+                          {t('registered')}
                           {item.user.registered}
                         </div>
                       </CTableDataCell>
@@ -429,22 +453,24 @@ const Dashboard = () => {
                         <CIcon size="xl" icon={item.country.flag} title={item.country.name} />
                       </CTableDataCell>
                       <CTableDataCell>
-                        <div className="clearfix">
-                          <div className="float-start">
-                            <strong>{item.usage.value}%</strong>
-                          </div>
-                          <div className="float-end">
-                            <small className="text-medium-emphasis">{item.usage.period}</small>
-                          </div>
+                        <div className="d-flex justify-content-between align-items-baseline text-nowrap">
+                          <div className="fw-semibold">{item.usage.value}%</div>
+                          <div className="text-body-secondary small ms-3">{item.usage.period}</div>
                         </div>
-                        <CProgress thin color={item.usage.color} value={item.usage.value} />
+                        <CProgress
+                          thin
+                          color={`${item.usage.color}-gradient`}
+                          value={item.usage.value}
+                        />
                       </CTableDataCell>
                       <CTableDataCell className="text-center">
                         <CIcon size="xl" icon={item.payment.icon} />
                       </CTableDataCell>
                       <CTableDataCell>
-                        <div className="small text-medium-emphasis">Last login</div>
-                        <strong>{item.activity}</strong>
+                        <div className="small text-body-secondary text-nowrap">
+                          {t('lastLogin')}
+                        </div>
+                        <div className="fw-semibold text-nowrap">{item.activity}</div>
                       </CTableDataCell>
                     </CTableRow>
                   ))}

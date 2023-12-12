@@ -13,7 +13,7 @@ import {
   CInputGroup,
   CInputGroupText,
   CRow,
-} from '@coreui/react'
+} from '@coreui/react-pro'
 import { DocsExample } from 'src/components'
 
 const Layout = () => {
@@ -25,7 +25,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Form grid</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               More complex forms can be built using our grid classes. Use these for form layouts
               that require multiple columns, varied widths, and additional alignment options.
             </p>
@@ -48,7 +48,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Gutters</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               By adding <a href="https://coreui.io/docs/layout/gutters/">gutter modifier classes</a>
               , you can have control over the gutter width in as well the inline as block direction.
             </p>
@@ -62,7 +62,7 @@ const Layout = () => {
                 </CCol>
               </CRow>
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               More complex layouts can also be created with the grid system.
             </p>
             <DocsExample href="forms/layout#gutters">
@@ -102,7 +102,9 @@ const Layout = () => {
                   <CFormCheck type="checkbox" id="gridCheck" label="Check me out" />
                 </CCol>
                 <CCol xs={12}>
-                  <CButton type="submit">Sign in</CButton>
+                  <CButton color="primary" type="submit">
+                    Sign in
+                  </CButton>
                 </CCol>
               </CForm>
             </DocsExample>
@@ -115,14 +117,14 @@ const Layout = () => {
             <strong>Layout</strong> <small>Horizontal form</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Create horizontal forms with the grid by adding the <code>.row</code> class to form
               groups and using the <code>.col-*-*</code> classes to specify the width of your labels
               and controls. Be sure to add <code>.col-form-label</code> to your{' '}
               <code>&lt;CFormLabel&gt;</code>s as well so they&#39;re vertically centered with their
               associated form controls.
             </p>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               At times, you maybe need to use margin or padding utilities to create that perfect
               alignment you need. For example, we&#39;ve removed the <code>padding-top</code> on our
               stacked radio inputs label to better align the text baseline.
@@ -178,7 +180,9 @@ const Layout = () => {
                     <CFormCheck type="checkbox" id="gridCheck1" label="Example checkbox" />
                   </div>
                 </CRow>
-                <CButton type="submit">Sign in</CButton>
+                <CButton color="primary" type="submit">
+                  Sign in
+                </CButton>
               </CForm>
             </DocsExample>
           </CCardBody>
@@ -190,7 +194,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Horizontal form label sizing</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Be sure to use <code>.col-form-label-sm</code> or <code>.col-form-label-lg</code> to
               your <code>&lt;CFormLabel&gt;</code>s or <code>&lt;legend&gt;</code>s to correctly
               follow the size of <code>.form-control-lg</code> and <code>.form-control-sm</code>.
@@ -246,7 +250,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Column sizing</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               As shown in the previous examples, our grid system allows you to place any number of{' '}
               <code>&lt;CCol&gt;</code>s within a <code>&lt;CRow&gt;</code>. They&#39;ll split the
               available width equally between them. You may also pick a subset of your columns to
@@ -276,7 +280,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Auto-sizing</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               The example below uses a flexbox utility to vertically center the contents and changes{' '}
               <code>&lt;CCol&gt;</code> to <code>&lt;CCol xs=&#34;auto&#34;&gt;</code> so that your
               columns only take up as much space as needed. Put another way, the column sizes itself
@@ -314,11 +318,13 @@ const Layout = () => {
                   <CFormCheck type="checkbox" id="autoSizingCheck" label="Remember me" />
                 </CCol>
                 <CCol xs="auto">
-                  <CButton type="submit">Submit</CButton>
+                  <CButton color="primary" type="submit">
+                    Submit
+                  </CButton>
                 </CCol>
               </CForm>
             </DocsExample>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               You can then remix that once again with size-specific column classes.
             </p>
             <DocsExample href="forms/layout#auto-sizing">
@@ -353,7 +359,9 @@ const Layout = () => {
                   <CFormCheck type="checkbox" id="autoSizingCheck2" label="Remember me" />
                 </CCol>
                 <CCol xs="auto">
-                  <CButton type="submit">Submit</CButton>
+                  <CButton color="primary" type="submit">
+                    Submit
+                  </CButton>
                 </CCol>
               </CForm>
             </DocsExample>
@@ -366,7 +374,7 @@ const Layout = () => {
             <strong>Layout</strong> <small>Inline forms</small>
           </CCardHeader>
           <CCardBody>
-            <p className="text-medium-emphasis small">
+            <p className="text-body-secondary small">
               Use the <code>&lt;CCol xs=&#34;auto&#34;&gt;</code> class to create horizontal
               layouts. By adding{' '}
               <a href="https://coreui.io/docs/layout/gutters/">gutter modifier classes</a>, we will
@@ -400,7 +408,9 @@ const Layout = () => {
                   <CFormCheck type="checkbox" id="inlineFormCheck" label="Remember me" />
                 </CCol>
                 <CCol xs={12}>
-                  <CButton type="submit">Submit</CButton>
+                  <CButton color="primary" type="submit">
+                    Submit
+                  </CButton>
                 </CCol>
               </CForm>
             </DocsExample>

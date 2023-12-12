@@ -1,5 +1,5 @@
 import React from 'react'
-import { CButton, CCard, CCardBody, CCardHeader, CCol, CContainer, CRow } from '@coreui/react'
+import { CButton, CCard, CCardBody, CCardHeader, CCol, CContainer, CRow } from '@coreui/react-pro'
 import { DocsLink } from 'src/components'
 
 const Jumbotrons = () => {
@@ -18,7 +18,7 @@ const Jumbotrons = () => {
               previous versions of Bootstrap. Check out the examples below for how you can remix and
               restyle it to your liking.
             </p>
-            <CButton size="lg">Example button</CButton>
+            <CButton color="primary" size="lg">Example button</CButton>
           </CContainer>
           <CRow className="align-items-md-stretch">
             <CCol md={6}>
