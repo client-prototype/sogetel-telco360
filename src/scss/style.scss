@@ -7,6 +7,9 @@
 // Import Chart.js custom tooltips styles
 @import "@coreui/chartjs/scss/coreui-chartjs";
 
+// If you want to add custom CSS you can put it here.
+@import "_root";
+
 @import "layout";
 
 // Plugins
@@ -17,3 +20,7 @@
 
 // If you want to add custom CSS you can put it here.
 @import "custom";
+
+// If you want to add custom CSS you can put it here.
+@import "_bg-gradients";
+
