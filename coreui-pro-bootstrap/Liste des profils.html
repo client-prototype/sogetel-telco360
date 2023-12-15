@@ -1,0 +1,2376 @@
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,SCSS,HTML,RWD,Dashboard">
+    <title>CoreUI Bootstrap Admin Template</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="css/examples.css" rel="stylesheet">
+    <script src="js/config.js"></script>
+    <script src="js/color-modes.js"></script>
+
+  </head>
+
+  <body>
+
+    
+<div class="container-fluid">
+    <div class="pageTitle" style="">Liste des profils</div>
+    <div class="nav nav-tabs nav nav-tabs" role="tablist" style="">
+      <div id="9609c0e6-e36e-4dda-a224-ae90a2cacfc0" class="nav-item">
+        <a href="#" role="tab" data-rb-event-key="0" aria-selected="true" class="nav-link active">Employé <span class="" role="alert"></span>
+        </a>
+      </div>
+      <div id="3795f69c-c601-4390-b80c-cf81a9376a41" class="nav-item">
+        <a href="#" role="tab" data-rb-event-key="1" aria-selected="false" class="nav-link">Individu <span class="" role="alert"></span>
+        </a>
+      </div>
+      <div id="ec0abdd4-c5e2-4eba-a094-d55b962235a4" class="nav-item">
+        <a href="#" role="tab" data-rb-event-key="2" aria-selected="false" class="nav-link">Système <span class="" role="alert"></span>
+        </a>
+      </div>
+    </div>
+    <div class="tab-content" style="">
+      <div role="tabpanel" aria-hidden="false" class="fade tab-pane active show">
+        <div class="border pl-1 pr-1 pb-1" aria-label="Profils">
+          <div class="row no-gutters">
+            <div class="col-6 my-auto font-weight-bold">Profils</div>
+            <div class="col-6 d-flex justify-content-end">
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Filtrer" class="btn">
+                  <span class=" cis-filter Xs-nomargin-top c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="importer" class="btn">
+                  <span class="fa fa-solid fa-file-import fa-lg c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="btn-group">
+                <div class="" style="position: relative; display: inline;">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-none" aria-label="Colonnes">
+                    <span class="cis-columns c-icon c-icon-custom-size"></span>
+                  </button>
+                </div>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                  <div class="checkbox form-check">
+                    <input id="Numéro d'employé" name="Numéro d'employé" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Numéro d'employé" class="form-check-label form-check-label">Numéro d'employé</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Superviseur" name="Superviseur" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Superviseur" class="form-check-label form-check-label">Superviseur</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Parrain" name="Parrain" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Parrain" class="form-check-label form-check-label">Parrain</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Région" name="Région" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Région" class="form-check-label form-check-label">Région</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Organisation" name="Organisation" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Organisation" class="form-check-label form-check-label">Organisation</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Actif" name="Actif" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Actif" class="form-check-label form-check-label">Actif</label>
+                  </div>
+                </div>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Ajouter" class="btn">
+                  <span class="cis-plus c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="d-flex flex-wrap card-body">
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-fullName" class="">Nom complet</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-fullName" name="fullName" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-employeeNumber" class="">Numéro d'employé</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-employeeNumber" name="employeeNumber" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-supervisorName" class="">Superviseur</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-supervisorName" name="supervisorName" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-mentorName" class="">Parrain</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-mentorName" name="mentorName" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <label for="id-junk-ID-regionId" class="">Région</label>
+                <div class="SxSelect SxSelectBlock SxSelectSearchable">
+                  <div class="input-group">
+                    <div class="SxSearchable w-100 dropdown">
+                      <button aria-haspopup="true" aria-expanded="false" id="SxSelectToggleundefined" type="button" class="w-100 text-left  p-1 btn btn-secondary">
+                        <div class="w-100 d-block white-space-pre">Choisir... <i class="cis-chevron-bottom-alt float-right"></i>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="input-group-append">
+                      <button id="SxSelect-Tooltip-regionId" class="sxButton btn outline  fa fa-times form-control btn-outline-secondary" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <label for="id-junk-ID-isActive" class="">Actif</label>
+                <br>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <div class="d-flex triStateInactive">
+                      <label class="c-switch form-check-label c-switch-label c-switch-primary my-auto">
+                        <input class="c-switch-input c-form-check-input" type="checkbox" id="isActive" name="isActive" label="false">
+                        <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                      </label>
+                    </div>
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 d-flex">
+                <div class=" ml-1">
+                  <div class="" style="position: relative; display: inline;">
+                    <button aria-label="Rechercher" class="btn">
+                      <span class="cis-check-circle c-icon c-icon-custom-size"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="ml-1">
+                  <div class="" style="position: relative; display: inline;">
+                    <button aria-label="Effacer" class="btn">
+                      <span class="cis-filter-x c-icon c-icon-custom-size"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table tabindex="0" class="table-bordered sxTable ">
+            <thead>
+              <tr class="card-header">
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <span aria-label="Trier" class="cis-swap-vertical btn float-right m-0 mr-1 p-0"></span>Nom complet
+                    </div>
+                  </div>
+                </th>
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <span aria-label="Trier" class="cis-swap-vertical btn float-right m-0 mr-1 p-0"></span>Numéro d'employé
+                    </div>
+                  </div>
+                </th>
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Superviseur</div>
+                  </div>
+                </th>
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Parrain</div>
+                  </div>
+                </th>
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Région</div>
+                  </div>
+                </th>
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Organisation</div>
+                  </div>
+                </th>
+                <th class="text-truncate" style="min-width: 58px; width: 58px;">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Actif</div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/-1/" class="font-weight-bold SxFakeLink white-space-pre">Admin Principal</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">0000</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/11/" class="font-weight-bold SxFakeLink white-space-pre">Philippe Chouinard-Gaouette</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">123456</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/18/" class="font-weight-bold SxFakeLink white-space-pre">Christophe Bélanger III</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">NONE</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">CGI</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/24/" class="font-weight-bold SxFakeLink white-space-pre">Éric Boisvert</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">032503250325032503250325032503030303030303030303</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/25/" class="font-weight-bold SxFakeLink white-space-pre">test QA20211202</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-times booleanLabel negative"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/27/" class="font-weight-bold SxFakeLink white-space-pre">François Roussel</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">575</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Éric Boisvert</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/31/" class="font-weight-bold SxFakeLink white-space-pre">johpon Employé</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">296</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">johpon Employé</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">OrganiTest_0323</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/42/" class="font-weight-bold SxFakeLink white-space-pre">jpc Employee0111</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">789</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">JohPon Employé_0228</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">JohPon Employé_0228</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/46/" class="font-weight-bold SxFakeLink white-space-pre">johpon Empl_0117</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/51/" class="font-weight-bold SxFakeLink white-space-pre">JPC Employé0202</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">2913</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">johpon Employé</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">OrgQA-é</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/55/" class="font-weight-bold SxFakeLink white-space-pre">jpc johpon_0217</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">2913</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">François Roussel</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/56/" class="font-weight-bold SxFakeLink white-space-pre">JohPon jpc_0218b</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">5478</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">JohPonOrg_</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/57/" class="font-weight-bold SxFakeLink white-space-pre">JohPon Employé_0228</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">2913</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select">Beauce/Etchemin</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/104/" class="font-weight-bold SxFakeLink white-space-pre">hhhhh hhhhh</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">544kjkjnjkl,jb ,lj</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">JPC Employé0202</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">JPC Employé0202</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select">Beauce/Etchemin</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">Test_0317</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/111/" class="font-weight-bold SxFakeLink white-space-pre">Auto cDtWv Lastname sPT8R</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">57754</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/112/" class="font-weight-bold SxFakeLink white-space-pre">Auto Exjwj Lastname wtCZ4</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">62821</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/121/" class="font-weight-bold SxFakeLink white-space-pre">Auto gRhxf Lastname I6pKt</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">21302</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/122/" class="font-weight-bold SxFakeLink white-space-pre">Auto yy4jD Lastname UpIZY</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">65286</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/123/" class="font-weight-bold SxFakeLink white-space-pre">Auto ZSnDZ Lastname 8EOwO</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">57797</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/124/" class="font-weight-bold SxFakeLink white-space-pre">Auto eKnLj Lastname vWnwB</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">62341</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/125/" class="font-weight-bold SxFakeLink white-space-pre">Auto JAzij Lastname x2qk8</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">51135</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/126/" class="font-weight-bold SxFakeLink white-space-pre">Auto fvPZa Lastname kIGEE</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">46672</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/127/" class="font-weight-bold SxFakeLink white-space-pre">Auto n5mnF Lastname NpXS8</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">23623</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/128/" class="font-weight-bold SxFakeLink white-space-pre">Auto z2VYN Lastname NmWmw</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">10153</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/129/" class="font-weight-bold SxFakeLink white-space-pre">Auto S65Lk Lastname Fnrcn</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="employeeNumber">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">14120</div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="supervisorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="mentorName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <br>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="regionId">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <div aria-label="regionId-select"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="organizations">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center"></div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-wrap mt-1" aria-label="Pagination">
+            <button class="sxButton btn btn-primary mr-1" value="1" type="button">1</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="2" type="button">2</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="3" type="button">3</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="4" type="button">4</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="5" type="button">5</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;&gt;</button>
+            <input placeholder="Aller à" min="1" max="17" type="number" class="ml-1 form-control" value="1" style="width: 80px;">
+            <span class="ml-1 mt-1 mr-5"> / 17 pages totales</span>
+            <div class="d-flex">
+              <span class="mt-1 mr-2">Items par page</span>
+              <div class="SxSelect SxSelectBlock">
+                <select name="" class="form-control">
+                  <option value="" class="d-none" disabled="">Choisir...</option>
+                  <option value="0" class="">10&nbsp;/&nbsp;page</option>
+                  <option value="1" class="">25&nbsp;/&nbsp;page</option>
+                  <option value="2" class="">50&nbsp;/&nbsp;page</option>
+                  <option value="3" class="">100&nbsp;/&nbsp;page</option>
+                  <option value="4" class="">250&nbsp;/&nbsp;page</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" aria-hidden="true" class="fade tab-pane">
+        <div class="border pl-1 pr-1 pb-1" aria-label="Profils">
+          <div class="row no-gutters">
+            <div class="col-6 my-auto font-weight-bold">Profils</div>
+            <div class="col-6 d-flex justify-content-end">
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Filtrer" class="btn">
+                  <span class=" cis-filter Xs-nomargin-top c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="importer" class="btn">
+                  <span class="fa fa-solid fa-file-import fa-lg c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="btn-group">
+                <div class="" style="position: relative; display: inline;">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-none" aria-label="Colonnes">
+                    <span class="cis-columns c-icon c-icon-custom-size"></span>
+                  </button>
+                </div>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                  <div class="checkbox form-check">
+                    <input id="Actif" name="Actif" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Actif" class="form-check-label form-check-label">Actif</label>
+                  </div>
+                </div>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Ajouter" class="btn">
+                  <span class="cis-plus c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="d-flex flex-wrap card-body">
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-fullName" class="">Nom complet</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-fullName" name="fullName" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <label for="id-junk-ID-isActive" class="">Actif</label>
+                <br>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <div class="d-flex triStateInactive">
+                      <label class="c-switch form-check-label c-switch-label c-switch-primary my-auto">
+                        <input class="c-switch-input c-form-check-input" type="checkbox" id="isActive" name="isActive" label="false">
+                        <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                      </label>
+                    </div>
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100 d-flex">
+                <div class=" ml-1">
+                  <div class="" style="position: relative; display: inline;">
+                    <button aria-label="Rechercher" class="btn">
+                      <span class="cis-check-circle c-icon c-icon-custom-size"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="ml-1">
+                  <div class="" style="position: relative; display: inline;">
+                    <button aria-label="Effacer" class="btn">
+                      <span class="cis-filter-x c-icon c-icon-custom-size"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table tabindex="0" class="table-bordered sxTable ">
+            <thead>
+              <tr class="card-header">
+                <th class="">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <span aria-label="Trier" class="cis-swap-vertical btn float-right m-0 mr-1 p-0"></span>Nom complet
+                    </div>
+                  </div>
+                </th>
+                <th class="text-truncate" style="min-width: 58px; width: 58px;">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">Actif</div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/1/" class="font-weight-bold SxFakeLink white-space-pre">Root</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/2/" class="font-weight-bold SxFakeLink white-space-pre">Iman BENLEKEHAL</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/3/" class="font-weight-bold SxFakeLink white-space-pre">newName NewLastName</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/4/" class="font-weight-bold SxFakeLink white-space-pre">Iman2 BENLEKEHAL</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/5/" class="font-weight-bold SxFakeLink white-space-pre">newName newLastName</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-times booleanLabel negative"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/6/" class="font-weight-bold SxFakeLink white-space-pre">BoBo</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/7/" class="font-weight-bold SxFakeLink white-space-pre">François Roussel</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/8/" class="font-weight-bold SxFakeLink white-space-pre">Patrice Leger</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/9/" class="font-weight-bold SxFakeLink white-space-pre">Bob Binette</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/10/" class="font-weight-bold SxFakeLink white-space-pre">NewProfile lastName</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/12/" class="font-weight-bold SxFakeLink white-space-pre">Hulk Hogan</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/13/" class="font-weight-bold SxFakeLink white-space-pre">Angèle Ladouceur</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/14/" class="font-weight-bold SxFakeLink white-space-pre">Angèle2 Name2</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/15/" class="font-weight-bold SxFakeLink white-space-pre">Alexandre The Great</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/16/" class="font-weight-bold SxFakeLink white-space-pre">Nisrine Charabi</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/17/" class="font-weight-bold SxFakeLink white-space-pre">Johan Pont-Chateau</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/19/" class="font-weight-bold SxFakeLink white-space-pre">##testdeploySprint65_QA avecmomo</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/20/" class="font-weight-bold SxFakeLink white-space-pre">New ProfileTest</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/30/" class="font-weight-bold SxFakeLink white-space-pre">johpon Personne</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/33/" class="font-weight-bold SxFakeLink white-space-pre">johpon Personne 2</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/34/" class="font-weight-bold SxFakeLink white-space-pre">johpon Personne 3</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/36/" class="font-weight-bold SxFakeLink white-space-pre">johpon Personne20211213</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/39/" class="font-weight-bold SxFakeLink white-space-pre">johpon Personne20211215</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/44/" class="font-weight-bold SxFakeLink white-space-pre">Test</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr tabindex="0" class="">
+                <td class="align-middle" aria-label="fullName">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate   ml-1">
+                      <a href="/ProfileMgmtList/ProfileMgmt/45/" class="font-weight-bold SxFakeLink white-space-pre">johpon Indiv_0117</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle" aria-label="isActive">
+                  <div class="" style="position: relative; display: inline;">
+                    <div class="white-space-pre text-truncate  text-center">
+                      <i aria-label="Actif" class="fa fa-times booleanLabel negative"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-wrap mt-1" aria-label="Pagination">
+            <button class="sxButton btn btn-primary mr-1" value="1" type="button">1</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="2" type="button">2</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="3" type="button">3</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="4" type="button">4</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="5" type="button">5</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;&gt;</button>
+            <input placeholder="Aller à" min="1" max="17" type="number" class="ml-1 form-control" value="1" style="width: 80px;">
+            <span class="ml-1 mt-1 mr-5"> / 17 pages totales</span>
+            <div class="d-flex">
+              <span class="mt-1 mr-2">Items par page</span>
+              <div class="SxSelect SxSelectBlock">
+                <select name="" class="form-control">
+                  <option value="" class="d-none" disabled="">Choisir...</option>
+                  <option value="0" class="">10&nbsp;/&nbsp;page</option>
+                  <option value="1" class="">25&nbsp;/&nbsp;page</option>
+                  <option value="2" class="">50&nbsp;/&nbsp;page</option>
+                  <option value="3" class="">100&nbsp;/&nbsp;page</option>
+                  <option value="4" class="">250&nbsp;/&nbsp;page</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" aria-hidden="true" class="fade tab-pane">
+        <div class="border pl-1 pr-1 pb-1" aria-label="Profils">
+          <div class="row no-gutters">
+            <div class="col-6 my-auto font-weight-bold">Profils</div>
+            <div class="col-6 d-flex justify-content-end">
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Filtrer" class="btn">
+                  <span class=" cis-filter Xs-nomargin-top c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="importer" class="btn">
+                  <span class="fa fa-solid fa-file-import fa-lg c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+              <div class="btn-group">
+                <div class="" style="position: relative; display: inline;">
+                  <button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-none" aria-label="Colonnes">
+                    <span class="cis-columns c-icon c-icon-custom-size"></span>
+                  </button>
+                </div>
+                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                  <div class="checkbox form-check">
+                    <input id="Langue préférée" name="Langue préférée" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Langue préférée" class="form-check-label form-check-label">Langue préférée</label>
+                  </div>
+                  <div class="checkbox form-check">
+                    <input id="Actif" name="Actif" type="checkbox" class="form-check-input form-check-input" checked="">
+                    <label for="Actif" class="form-check-label form-check-label">Actif</label>
+                  </div>
+                </div>
+              </div>
+              <div class="" style="position: relative; display: inline;">
+                <button aria-label="Ajouter" class="btn">
+                  <span class="cis-plus c-icon c-icon-custom-size"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="d-flex flex-wrap card-body">
+              <div class="w-25 px-1">
+                <div class="">
+                  <label for="id-junk-ID-fullName" class="">Nom complet</label>
+                </div>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">
+                    <input id="id-junk-ID-fullName" name="fullName" type="text" class="form-control" value="">
+                    <div class="input-group-append">
+                      <button class="sxButton btn outline  form-control btn-outline-secondary " type="button">
+                        <i class="cil-apps-settings"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="border d-none">
+                  <div class="d-100 p-1">
+                    <label>Mot entier uniquement</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Sensible à la case</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>Exclure la valeur entrée</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">
+                      <span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                  <div class="d-100 p-1">
+                    <label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>
+                    <label class="c-switch form-check-label c-switch-label c-switch-primary float-right">
+                      <input class="c-switch-input c-form-check-input" type="checkbox">undefined<span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <label for="id-junk-ID-languageId" class="">Langue préférée</label>
+                <div class="SxSelect SxSelectBlock SxSelectSearchable">
+                  <div class="input-group">
+                    <div class="SxSearchable w-100 dropdown">undefined<button aria-haspopup="true" aria-expanded="false" id="SxSelectToggleundefined" type="button" class="w-100 text-left  p-1 btn btn-secondary">undefined<div class="w-100 d-block white-space-pre">Choisir...undefined<i class="cis-chevron-bottom-alt float-right"></i>undefined</div>undefined</button>
+                    </div>
+                    <div class="input-group-append">undefined<button id="SxSelect-Tooltip-languageId" class="sxButton btn outline  fa fa-times form-control btn-outline-secondary" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-25 px-1">
+                <label for="id-junk-ID-isActive" class="">Actif</label>
+                <br>
+                <div class="d-flex ">
+                  <div class="border-0 input-group">undefined<div class="d-flex triStateInactive">undefined<label class="c-switch form-check-label c-switch-label c-switch-primary my-auto">undefined<input class="c-switch-input c-form-check-input" type="checkbox" id="isActive" name="isActive" label="false">undefined<span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>undefined</label>undefined</div>undefined<div class="input-group-append">undefined<button class="sxButton btn outline  form-control btn-outline-secondary " type="button">undefined<i class="cil-apps-settings"></i>undefined</button>undefined</div>undefined</div>
+                </div>
+                <div class="border d-none">undefined<div class="d-100 p-1">undefined<label>FILTERBAROPTION_ADVTEXTOPTIONS_NULL_VALUE</label>undefined<label class="c-switch form-check-label c-switch-label c-switch-primary float-right">undefined<input class="c-switch-input c-form-check-input" type="checkbox">undefined<span class="c-switch-slider" data-checked="✓" data-unchecked="✕"></span>undefined</label>undefined</div>undefined</div>
+              </div>
+              <div class="w-100 d-flex">undefined<div class=" ml-1">undefined<div class="" style="position: relative; display: inline;">undefined<button aria-label="Rechercher" class="btn">undefined<span class="cis-check-circle c-icon c-icon-custom-size"></span>undefined</button>undefined</div>undefined</div>undefined<div class="ml-1">undefined<div class="" style="position: relative; display: inline;">undefined<button aria-label="Effacer" class="btn">undefined<span class="cis-filter-x c-icon c-icon-custom-size"></span>undefined</button>undefined</div>undefined</div>
+              </div>
+            </div>
+          </div>
+          <table tabindex="0" class="table-bordered sxTable ">
+            <thead>
+              <tr class="card-header">undefined<th class="">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<span aria-label="Trier" class="cis-swap-vertical btn float-right m-0 mr-1 p-0"></span>Nom completundefined</div>undefined</div>undefined</th>undefined<th class="">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">Langue préférée</div>undefined</div>undefined</th>undefined<th class="text-truncate" style="min-width: 58px; width: 58px;">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">Actif</div>undefined</div>undefined</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/21/" class="font-weight-bold SxFakeLink white-space-pre">The Best System</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/29/" class="font-weight-bold SxFakeLink white-space-pre">NewProfile</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select"></div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/32/" class="font-weight-bold SxFakeLink white-space-pre">johpon Système5</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/38/" class="font-weight-bold SxFakeLink white-space-pre">johponSystem20211215</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select"></div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/40/" class="font-weight-bold SxFakeLink white-space-pre">johpon SYSTEM</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/41/" class="font-weight-bold SxFakeLink white-space-pre">johpon System1220</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">English</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/47/" class="font-weight-bold SxFakeLink white-space-pre">Telco360Services</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">English</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/54/" class="font-weight-bold SxFakeLink white-space-pre">TestSystem</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/58/" class="font-weight-bold SxFakeLink white-space-pre">Autodelete</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/59/" class="font-weight-bold SxFakeLink white-space-pre">medtest2025</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">English</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/317/" class="font-weight-bold SxFakeLink white-space-pre">gbgtbgt</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/358/" class="font-weight-bold SxFakeLink white-space-pre">{fullName 0Gdhh</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/359/" class="font-weight-bold SxFakeLink white-space-pre">{fullName abjs6</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/360/" class="font-weight-bold SxFakeLink white-space-pre">{fullName x2DFm</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/361/" class="font-weight-bold SxFakeLink white-space-pre">{fullName DQgef</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/362/" class="font-weight-bold SxFakeLink white-space-pre">fullName FyTqZ</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/363/" class="font-weight-bold SxFakeLink white-space-pre">fullName 3YBhH</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/364/" class="font-weight-bold SxFakeLink white-space-pre">fullName 855UP</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/365/" class="font-weight-bold SxFakeLink white-space-pre">fullName ws1X7</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/366/" class="font-weight-bold SxFakeLink white-space-pre">fullName QJ2J2</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/367/" class="font-weight-bold SxFakeLink white-space-pre">fullName xKV1W</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/372/" class="font-weight-bold SxFakeLink white-space-pre">fullName QF0O3</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/375/" class="font-weight-bold SxFakeLink white-space-pre">fullName nkExi</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/380/" class="font-weight-bold SxFakeLink white-space-pre">fullName U09Ls</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+              <tr tabindex="0" class="">undefined<td class="align-middle" aria-label="fullName">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<a href="/ProfileMgmtList/ProfileMgmt/383/" class="font-weight-bold SxFakeLink white-space-pre">fullName ELVtm</a>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="languageId">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate   ml-1">undefined<div aria-label="languageId-select">Français</div>undefined</div>undefined</div>undefined</td>undefined<td class="align-middle" aria-label="isActive">undefined<div class="" style="position: relative; display: inline;">undefined<div class="white-space-pre text-truncate  text-center">undefined<i aria-label="Actif" class="fa fa-check booleanLabel positive"></i>undefined</div>undefined</div>undefined</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-wrap mt-1" aria-label="Pagination">
+            <button class="sxButton btn btn-primary mr-1" value="1" type="button">1</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="2" type="button">2</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="3" type="button">3</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="4" type="button">4</button>
+            <button class="sxButton btn btn-secondary  mr-1" value="5" type="button">5</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;</button>
+            <button class="sxButton btn btn-secondary  mr-1" type="button">&gt;&gt;</button>
+            <input placeholder="Aller à" min="1" max="9" type="number" class="ml-1 form-control" value="1" style="width: 80px;">
+            <span class="ml-1 mt-1 mr-5"> / 9 pages totales</span>
+            <div class="d-flex">undefined<span class="mt-1 mr-2">Items par page</span>undefined<div class="SxSelect SxSelectBlock">undefined<select name="" class="form-control">undefined<option value="" class="d-none" disabled="">Choisir...</option>undefined<option value="0" class="">10&nbsp;/&nbsp;page</option>undefined<option value="1" class="">25&nbsp;/&nbsp;page</option>undefined<option value="2" class="">50&nbsp;/&nbsp;page</option>undefined<option value="3" class="">100&nbsp;/&nbsp;page</option>undefined<option value="4" class="">250&nbsp;/&nbsp;page</option>undefined</select>undefined</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- CoreUI and necessary plugins-->
+      <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+      <script src="vendors/simplebar/js/simplebar.min.js"></script>
+      <script src="vendors/i18next/js/i18next.min.js"></script>
+      <script src="vendors/i18next-http-backend/js/i18nextHttpBackend.js"></script>
+      <script src="vendors/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.js"></script>
+      <script src="js/i18next.js"></script>
+      <script>
+        const header = document.querySelector('header.header');
+  
+        document.addEventListener('scroll', () => {
+          if (header) {
+            header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+          }
+        });
+      </script>
+      <script>
+      </script>
+  
+    </body>
+  </html>
